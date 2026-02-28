@@ -1,0 +1,22 @@
+// SPDX-FileCopyrightText: © 2026 Jeffrey C. Ollie
+// SPDX-License-Identifier: MIT
+
+.{
+    .name = .sfnt2woff,
+    .version = "0.0.0",
+    .fingerprint = 0x8b6dcd7f69c9d6ab, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.16.0-dev.2676+4e2cec265",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "LICENSES",
+        "README.md",
+        "sfnt2woff.c",
+        "woff-private.h",
+        "woff.c",
+        "woff.h",
+        "woff2sfnt.c",
+        "woffmetadata.c",
+    },
+}

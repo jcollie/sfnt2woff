@@ -1,4 +1,10 @@
+# SPDX-FileCopyrightText: © 2026 Jeffrey C. Ollie
+# SPDX-License-Identifier: MIT
+
 sfnt2woff
-*.o
 woff2sfnt
 woffmetadata
+*.o
+/zig-out
+/zig-pkgs
+/.zig-cache
