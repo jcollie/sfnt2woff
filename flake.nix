@@ -47,11 +47,11 @@
           name = "sfnt2woff";
           nativeBuildInputs = [
             zig.packages.${pkgs.stdenv.hostPlatform.system}.master
-            # pkgs.zig
             pkgs.reuse
+            pkgs.pkg-config
           ];
           buildInputs = [
-            pkgs.zlib
+            pkgs.libz
           ];
         };
         default = self.devShells.${pkgs.stdenv.hostPlatform.system}.master;
