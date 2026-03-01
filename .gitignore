@@ -8,3 +8,4 @@ woffmetadata
 /zig-out
 /zig-pkgs
 /.zig-cache
+/result*

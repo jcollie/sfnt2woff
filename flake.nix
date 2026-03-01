@@ -36,12 +36,18 @@
       );
     in
     {
+      packages = forAllSystems (pkgs: {
+        sfnt2woff = pkgs.callPackage ./package.nix {
+          zig = zig.packages.${pkgs.stdenv.hostPlatform.system}.master;
+        };
+        default = self.packages.${pkgs.stdenv.hostPlatform.system}.sfnt2woff;
+      });
       devShells = forAllSystems (pkgs: {
-        name = "sfnt2woff";
         master = pkgs.mkShell {
           name = "sfnt2woff";
           nativeBuildInputs = [
             zig.packages.${pkgs.stdenv.hostPlatform.system}.master
+            # pkgs.zig
             pkgs.reuse
           ];
           buildInputs = [
